@@ -222,9 +222,9 @@
             .card:active .front {
             transform: rotateY(180deg);
             }
-        footer{
-            color: #ffffff;
-            }
+    footer{
+        color: #ffffff;
+    }
        
        
     </style>
@@ -293,7 +293,7 @@
                             </div>
                         </div>
                                 `
-                }else if(i == '陰短暫雨' || i =='陰時多雲短暫雨' || i=='多雲時陰短暫雨' || i=='多雲短暫雨'|| i=='多雲午後短暫雷陣雨'){
+                }else if(i == '陰短暫雨' || i =='陰時多雲短暫雨' || i=='多雲時陰短暫雨' || i=='多雲短暫雨'|| i=='多雲午後短暫雷陣雨' || i=='多雲短暫陣雨或雷雨' || i=='多雲時陰短暫陣雨或雷雨'){
                     section.innerHTML+= 
                     `<div class="card">
                             <div class="front">
@@ -343,7 +343,49 @@
                     });
 
 
-            `
+// ***************有問題的部分，不知道為甚麼不能跑if迴圈，if迴圈在下面**********
+
+
+                // var i = data["records"]["location"][0]["weatherElement"][0]["time"][0]["parameter"]["parameterName"];
+                // if(i == '多雲時晴'){
+                //     console.log(i);
+                //     section.innerHTML+= 
+                //     `
+                //         <div class="card">
+                //             <div class="picture1"></div>
+                //             <div class="text">
+                //                 <div>${item["weatherElement"][0]["time"][0]["startTime"]}</div>
+                //                 <div>地點:${item["locationName"]}</div>
+                //                 <div>天氣概況:${item["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                //                 <div>溫度:</div>
+                //             </div>
+                //         </div>
+                //                 `
+                // }else if(i == '陰短暫雨' || i =='陰時多雲短暫雨' || i=='多雲時陰短暫雨' || i=='多雲短暫雨'){
+                //     section.innerHTML+= 
+                //     `
+                //         <div class="card">
+                //             <div class="picture2"></div>
+                //             <div class="text">
+                //                 <div>${item["weatherElement"][0]["time"][0]["startTime"]}</div>
+                //                 <div>地點:${item["locationName"]}</div>
+                //                 <div>天氣概況:${item["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                //                 <div>溫度:</div>
+                //             </div>
+                //         </div>
+                //                 `
+                // }else if(i=='多雲'){
+                //     `
+                //         <div class="card">
+                //             <div class="picture3"></div>
+                //             <div class="text">
+                //                 <div>${item["weatherElement"][0]["time"][0]["startTime"]}</div>
+                //                 <div>地點:${item["locationName"]}</div>
+                //                 <div>天氣概況:${item["weatherElement"][0]["time"][0]["parameter"]["parameterName"]}</div>
+                //                 <div>溫度:</div>
+                //             </div>
+                //         </div>
+                //                 `
                 // }
 
                 });
